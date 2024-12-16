@@ -74,15 +74,8 @@
     color: #d7e6ed;
   }
 }
-/* @media (max-width: 736px) {
-  .navbar {
-    padding: 14px 150px;
-  }
-} */
+
 @media (min-width: 728px) {
-  .navbar {
-    padding: 14px 150px;
-  }
   .burger-menu {
     display: none;
   }

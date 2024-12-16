@@ -1,39 +1,40 @@
-import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import PageHeader from "../../components/pageHeader/PageHeader";
 import styles from "../products/productDetails.module.css";
+import usefetchProducts from "../../hooks/useFetchProducts";
+import headerImg from "../../assets/forsiden.jpg";
+import Discount from "../../components/discount/Discount";
 
 const ProductDetails = () => {
+  const { products } = usefetchProducts();
   const { _id } = useParams();
+  const product = products.find((item) => item._id === _id);
 
-  const [product, setProduct] = useState(null);
-  const fetchProductsById = async (_id) => {
-    setIsLoading(true);
-    const response = await fetch(
-      `https://legekrogen.webmcdm.dk/products/${_id}`
-    );
-    const data = await response.json();
-    console.log(data);
-    setProduct(data);
-  };
-  useEffect(() => {
-    fetchProductsById(_id);
-  }, [_id]);
-  console.log(product);
+  if (!product) {
+    return <p>Produkt detaljer ikke fundet.</p>;
+  }
+
   return (
     <>
+      <PageHeader headerImg={headerImg} />
       <article className={styles.detailsProduct}>
-        {/*   <PageHeader headerImg={headerImg} /> */}
+        {/* Billedet og rabatmærket */}
         <div className={styles.productContent}>
-          <img src={product.image} alt={product.title} />
-          <Discount discount={product?.discountInPercent} />
+          <div className={styles.imageWrapper}>
+            <img src={product.image} alt={product.title} />
+            <Discount discount={product?.discountInPercent} />
+          </div>
         </div>
-        <h2>{product.title}</h2>
-        <div className={styles.productDescription}>
-          <p>{product.description}</p>
-        </div>
-        <div className={styles.price}>
-          <p> Price {product.price}kr.</p>
+
+        {/* Titel, beskrivelse og pris */}
+        <div className={styles.productInfo}>
+          <h2>{product.title}</h2>
+          <div className={styles.productDescription}>
+            <p>{product.description}</p>
+          </div>
+          <div className={styles.price}>
+            <p>Price: {product.price}kr.</p>
+          </div>
         </div>
       </article>
     </>
