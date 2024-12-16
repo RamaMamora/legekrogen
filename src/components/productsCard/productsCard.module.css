@@ -1,0 +1,48 @@
+/* Generel styling for alle kort */
+.productCard {
+  background-color: #9478a8;
+  border-radius: 17px;
+  overflow: hidden;
+  box-shadow: rgba(0, 0, 0, 0.623) 0 0 10px;
+  transition: transform 0.2s, box-shadow 0.2s;
+  cursor: pointer;
+}
+
+.productCard:hover {
+  transform: scale(1.05);
+  box-shadow: rgba(0, 0, 0, 0.8) 0 4px 15px;
+}
+
+.image {
+  width: 350px;
+  min-height: 269px;
+  object-fit: cover;
+  border-radius: 17px 17px 0 0;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  color: #ffffff;
+  padding-left: 16px;
+}
+
+.info h3 {
+  padding-top: 19px;
+  font-size: 20px;
+  font-weight: 100;
+  line-height: 30px;
+  font-family: "Quicksand", serif;
+}
+.info h4 {
+  font-weight: 500;
+  font-size: 15px;
+  font-family: "Quicksand", serif;
+}
+.info h2 {
+  font-size: 24px;
+  font-weight: 300;
+  margin-bottom: 20px;
+  font-family: "Quicksand", serif;
+}

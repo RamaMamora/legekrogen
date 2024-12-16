@@ -1,0 +1,42 @@
+.products {
+  background-color: rgba(198, 178, 196, 0.68);
+  color: white;
+  padding-top: 92px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 159px;
+}
+
+.products p {
+  font-size: 77px;
+  font-weight: 300;
+  font-family: "Quicksand", serif;
+  margin-bottom: 113px;
+}
+
+.products h1 {
+  font-size: 86px;
+  font-weight: 400;
+  font-family: "Square Peg", serif;
+}
+
+/* Styling for kort */
+.products .productsGrid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 49px;
+  padding: 20px;
+}
+
+@media screen and (max-width: 728px) {
+  .products h1 {
+    font-size: 36px;
+    font-family: "Advent Pro", sans-serif;
+  }
+  .products p {
+    font-size: 40px;
+    margin-bottom: 78px;
+  }
+}

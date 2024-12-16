@@ -1,0 +1,96 @@
+.footer {
+  background-color: #355675;
+  text-align: center;
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.footer h3 {
+  color: white;
+  font-size: 70px;
+  font-family: "Square Peg", serif;
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+
+.contactIconsWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.contactDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: center;
+  color: white;
+  font-weight: 200;
+  font-family: "Quicksand", serif;
+  font-size: 16px;
+}
+
+.message,
+.phone {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.icons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  color: white;
+}
+
+.icons p {
+  font-size: 24px;
+  font-weight: 400;
+  font-family: "Quicksand", serif;
+}
+
+.socialIcon {
+  font-size: 50px;
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.socialIcon a {
+  color: white;
+  transition: color 0.3s ease;
+}
+
+.socialIcon a:hover {
+  color: #d7e6ed;
+}
+
+/* Farve, når ikonet er blevet klikket */
+.clicked {
+  color: #c1aece; /* Ændrer farven til efter klik */
+}
+
+.default {
+  color: white; /* Standardfarve før klik */
+}
+
+@media screen and (min-width: 728px) {
+  .contactIconsWrapper {
+    flex-direction: row;
+    gap: 40px;
+    width: 600px;
+    margin: 0 auto;
+  }
+
+  .contactDetails {
+    align-items: flex-start;
+  }
+}

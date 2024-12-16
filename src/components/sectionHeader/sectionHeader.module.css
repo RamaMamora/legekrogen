@@ -1,0 +1,27 @@
+.section {
+  background-color: #c1aece;
+  padding: 105px 87px;
+  text-align: center;
+  color: white;
+}
+.section h2 {
+  font-size: 86px;
+  font-family: "Square Peg", serif;
+  font-weight: 400;
+}
+.section p {
+  font-size: 74px;
+  font-family: "Quicksand", serif;
+}
+
+@media screen and (max-width: 728px) {
+  .section h2 {
+    width: 336px;
+    margin: 0 auto;
+    font-size: 36px;
+    font-family: "Advent Pro", sans-serif;
+  }
+  .section p {
+    font-size: 40px;
+  }
+}

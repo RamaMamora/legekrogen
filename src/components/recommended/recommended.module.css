@@ -1,0 +1,14 @@
+.recommendedcard {
+  background-color: #c1aece;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 49px;
+  align-items: center;
+  padding: 0 42px 66px;
+}
+.recommendedcard img {
+  width: 350px;
+  min-height: 269px;
+  border-radius: 17px 17px 0 0;
+}

@@ -1,0 +1,17 @@
+.shipping {
+  background-color: #d7e6ed;
+
+  padding: 9px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #355675;
+  font-size: 18px;
+  gap: 7px;
+  font-family: "Quicksand", serif;
+}
+@media screen and (max-width: 728px) {
+  .shipping {
+    font-size: 14px;
+  }
+}
