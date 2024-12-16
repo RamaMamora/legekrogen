@@ -1,0 +1,16 @@
+.discountCard {
+  background-color: #d7e6ed;
+  border-radius: 50%;
+  width: 122px;
+  height: 122px;
+  position: absolute;
+  top: 13px;
+  right: 23px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Square Peg", serif;
+  font-size: 48px;
+  font-weight: 400;
+  color: #355675;
+}

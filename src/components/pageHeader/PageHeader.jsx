@@ -4,6 +4,7 @@ const PageHeader = ({
   headerImg,
   title,
   text,
+  subTitle,
   customClass = "",
   isHomePage = false,
   addTextBg = false,
@@ -20,7 +21,8 @@ const PageHeader = ({
           addTextBg ? styles.headerContentWithBg : ""
         }`}
       >
-        <h1>{title}</h1>
+        <h2>{title}</h2>
+        {subTitle && <h1>{subTitle}</h1>}
         {text && <p>{text}</p>}
       </div>
     </header>

@@ -13,7 +13,7 @@ const Products = () => {
       <PageHeader
         headerImg={headerImg}
         title="På udkig efter nyt"
-        text="LEGETØJ?"
+        subTitle="LEGETØJ?"
         addTextBg={true} // Tilføjer baggrundsfarve til teksten
       />
 

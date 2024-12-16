@@ -6,11 +6,13 @@ import Navigation from "./components/Navigation";
 import Footer from "./components/footer/Footer";
 import MemberShip from "./components/memberShip/MemberShip";
 import Shipping from "./components/shipping/Shipping";
+import ProductDetails from "./pages/products/ProductDetails";
 
 function App() {
   const routes = useRoutes([
     { path: "/", element: <Home /> },
     { path: "/products", element: <Products /> },
+    { path: "/products/:_id", element: <ProductDetails /> },
     { path: "/faq", element: <Faq /> },
     { path: "/memberShip", element: <MemberShip /> },
   ]);

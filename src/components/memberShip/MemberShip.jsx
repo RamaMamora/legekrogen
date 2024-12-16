@@ -53,7 +53,8 @@ const MemberShip = () => {
     <>
       <PageHeader
         headerImg={headerImg}
-        title="Bliv medlem af vores KUNDEKLUB"
+        title="Bliv medlem af vores"
+        subTitle="KUNDEKLUB"
         text="og få eksklusive nyheder før alle andre"
         addTextBg={true} // Tilføjer baggrundsfarve til teksten
       />

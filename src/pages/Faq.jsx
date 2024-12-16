@@ -48,7 +48,8 @@ const Faq = () => {
     <>
       <PageHeader
         headerImg={headerImg}
-        title="Har du nogle spørgsmål?"
+        title="Har du nogle"
+        subTitle="SPØRGSMÅL?"
         text="Måske er de allerede besvaret herunder. Ellers er du altid velkommen til at kontakte os"
         addTextBg={true} // Tilføjer baggrundsfarve til teksten
       />

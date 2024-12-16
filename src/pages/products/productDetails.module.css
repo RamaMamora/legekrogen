@@ -1,0 +1,24 @@
+.detailsProduct {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  align-items: center;
+  padding: 40px;
+  margin-top: 80px;
+  border: 1px solid black;
+}
+.productContent {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.price {
+  font-size: 20px;
+  color: red;
+  font-weight: 800;
+}
+
+p {
+  font-size: 18px;
+}
