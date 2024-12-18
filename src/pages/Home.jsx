@@ -20,7 +20,6 @@ const Home = () => {
       />
       <SectionHeader title="Et udpluk af vores" text="LEGETØJ" />
       <Recommended />
-
       <FeedBack />
       <Newsletter />
     </article>

@@ -7,6 +7,7 @@ import Footer from "./components/footer/Footer";
 import MemberShip from "./components/memberShip/MemberShip";
 import Shipping from "./components/shipping/Shipping";
 import ProductDetails from "./pages/products/ProductDetails";
+import MyFavorites from "./components/myFavorites/MyFavorites";
 
 function App() {
   const routes = useRoutes([
@@ -14,6 +15,7 @@ function App() {
     { path: "/products", element: <Products /> },
     { path: "/products/:_id", element: <ProductDetails /> },
     { path: "/faq", element: <Faq /> },
+    { path: "/myFavorites", element: <MyFavorites /> },
     { path: "/memberShip", element: <MemberShip /> },
   ]);
 

@@ -7,13 +7,16 @@ import { FaCaretUp } from "react-icons/fa";
 import styles from "../styles/faq.module.css";
 
 const Faq = () => {
-  /* Usestate er til at holde styr på om et spørgsmål er åben eller lukket. 
-  null betyder alle er lukket */
+  // useState holder styr på, hvilket spørgsmål der er åbent.
+  // Initialværdi er null (alle spørgsmål er lukkede).
   const [openQuestion, setOpenQuestion] = useState(null);
+
+  // Funktion til at åbne/lukke et spørgsmål. Hvis det samme spørgsmål klikkes, lukkes det; ellers åbnes det.
   const toggleQuestion = (index) => {
-    setOpenQuestion(openQuestion === index ? null : index); // Luk det, hvis samme spørgsmål ellers åbn
+    setOpenQuestion(openQuestion === index ? null : index);
   };
 
+  // Data-array med spørgsmål og svar til FAQ
   const faqData = [
     {
       question: "Hvor lang tid er leveringstiden?",
@@ -23,6 +26,7 @@ const Faq = () => {
     {
       question:
         "Hvad kan jeg gøre, hvis jeg finder varen billigere et andet sted?",
+
       answer: (
         <div>
           <p>Vi prismatcher på følgende parametre:</p>
@@ -46,6 +50,7 @@ const Faq = () => {
 
   return (
     <>
+      {/* Sidehovedet med titel, undertitel og billede */}
       <PageHeader
         headerImg={headerImg}
         title="Har du nogle"
@@ -55,22 +60,26 @@ const Faq = () => {
       />
 
       <div className={styles.faqContainer}>
+        {/* Løkke over alle spørgsmål og svar */}
         {faqData.map((item, index) => (
           <div key={index} className={styles.faqItem}>
+            {/* Spørgsmålssektionen, som er klikbar */}
             <div
               className={styles.faqQuestion}
-              onClick={() => toggleQuestion(index)}
+              onClick={() => toggleQuestion(index)} // Klik for at åbne/lukke spørgsmål
             >
-              <p>{item.question}</p>
+              <p>{item.question}</p> {/* Viser spørgsmålet */}
               <p
                 className={`${styles.faqIcon} ${
-                  openQuestion === index ? styles.open : ""
+                  openQuestion === index ? styles.open : "" // Tilføjer en klasse, hvis spørgsmålet er åbent
                 }`}
               >
+                {/* Viser enten caret-up (åben) eller caret-down (lukket) */}
                 {openQuestion === index ? <FaCaretUp /> : <FaCaretDown />}
               </p>
             </div>
 
+            {/* Viser svaret kun, hvis spørgsmålet er åbent */}
             {openQuestion === index && (
               <div className={styles.faqAnswer}>{item.answer}</div>
             )}

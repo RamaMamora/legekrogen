@@ -1,0 +1,7 @@
+.MyFavorites {
+  background-color: #c1aece;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 80px;
+  gap: 80px;
+}

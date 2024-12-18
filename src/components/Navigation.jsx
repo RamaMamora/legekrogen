@@ -27,6 +27,9 @@ const Navigation = () => {
           <NavLink to="/Faq">FAQ</NavLink>
         </li>
         <li>
+          <NavLink to="/MyFavorites">Min favoritter</NavLink>
+        </li>
+        <li>
           <NavLink to="/MemberShip">Kundeklubben</NavLink>
         </li>
       </ul>

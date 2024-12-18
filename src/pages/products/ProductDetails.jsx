@@ -6,17 +6,22 @@ import headerImg from "../../assets/forsiden.jpg";
 import Discount from "../../components/discount/Discount";
 
 const ProductDetails = () => {
-  const { products } = usefetchProducts();
-  const { _id } = useParams();
-  const product = products.find((item) => item._id === _id);
+  const { products } = usefetchProducts(); // Henter produktdata fra hooken
+  const { _id } = useParams(); // Henter produktets id fra URL'en via useParams
+  const product = products.find((item) => item._id === _id); // Finder det specifikke produkt baseret på id'et fra URL'en
 
+  // Hvis produktet ikke findes, vis en fejlbesked
   if (!product) {
     return <p>Produkt detaljer ikke fundet.</p>;
   }
 
   return (
     <>
-      <PageHeader headerImg={headerImg} />
+      <PageHeader
+        headerImg={headerImg}
+        title="Informationer om produktet"
+        addTextBg={true}
+      />
       <article className={styles.detailsProduct}>
         {/* Billedet og rabatmærket */}
         <div className={styles.productContent}>
@@ -33,7 +38,9 @@ const ProductDetails = () => {
             <p>{product.description}</p>
           </div>
           <div className={styles.price}>
-            <p>Price: {product.price}kr.</p>
+            <p>
+              Pris: <span>{product.price}kr.</span>
+            </p>
           </div>
         </div>
       </article>
