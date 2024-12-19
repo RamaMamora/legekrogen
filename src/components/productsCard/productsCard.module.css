@@ -30,7 +30,6 @@
   height: 122px;
   position: absolute;
   top: 13px;
-
   display: flex;
   align-items: center;
   justify-content: center;
@@ -45,7 +44,7 @@
   flex-direction: column;
   gap: 4px;
   color: #ffffff;
-  padding: 16px;
+  padding: 16px 0 0 0;
 }
 
 .info h3 {
@@ -54,11 +53,13 @@
   font-weight: 100;
   line-height: 30px;
   font-family: "Quicksand", serif;
+  padding: 0 10px 0 10px;
 }
 .info h4 {
   font-weight: 500;
   font-size: 15px;
   font-family: "Quicksand", serif;
+  padding: 0 10px 0 10px;
 }
 .info h2 {
   font-size: 24px;
@@ -68,11 +69,28 @@
 }
 .priceAndIcon {
   display: flex;
-  align-items: center; /* Centrer indhold vertikalt */
-  justify-content: space-between; /* Adskil prisen og ikonet */
-  gap: 10px; /* Giv en afstand mellem pris og ikon */
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 0 10px 0 10px;
 }
 
 .icon {
-  cursor: pointer; /* Sørg for, at ikonet er klikbart */
+  cursor: pointer;
+}
+.info Button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  font-size: 20px;
+  font-weight: 400;
+  font-family: "Be Vietnam Pro", serif;
+  background-color: #6b5778;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.info Button:hover {
+  background-color: #c1aece;
 }

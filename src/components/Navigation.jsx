@@ -32,6 +32,9 @@ const Navigation = () => {
         <li>
           <NavLink to="/MemberShip">Kundeklubben</NavLink>
         </li>
+        <li>
+          <NavLink to="/CartPage">Kurv</NavLink>
+        </li>
       </ul>
     </nav>
   );
